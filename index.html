@@ -135,20 +135,26 @@
     <!-- Slideshow Section -->
     
     <body>
-        <div class="slideshow-container">
-            <div class="slideshow">
-                <div class="slide"><img src="https://www.holidify.com/images/cmsuploads/compressed/Jain_Temple_Ranakpur_20181030160227.jpg" alt="Slide 1"></div>
-                <div class="slide"><img src="https://www.easemytrip.com/travel/img/jain-temples.jpg" alt="Slide 2"></div>
-                <div class="slide"><img src="https://www.tusktravel.com/blog/wp-content/uploads/2023/03/Hutheesing-Jain-Temple-Ahmedabad-Gujarat.jpg" alt="Slide 3"></div>
-            </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="slideshow">
+            <div class="slide"><img
+                    src="https://www.holidify.com/images/cmsuploads/compressed/Jain_Temple_Ranakpur_20181030160227.jpg"
+                    alt="Slide 1"></div>
+            <div class="slide"><img src="https://www.easemytrip.com/travel/img/jain-temples.jpg" alt="Slide 2"></div>
+            <div class="slide"><img
+                    src="https://www.tusktravel.com/blog/wp-content/uploads/2023/03/Hutheesing-Jain-Temple-Ahmedabad-Gujarat.jpg"
+                    alt="Slide 3"></div>
         </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
 
     
 
     <script>
-      let slideIndex = 0;
+     let slideIndex = 0;
 
         function moveSlide(n) {
             const slideshow = document.querySelector('.slideshow');
@@ -165,8 +171,13 @@
             const offset = slideIndex * -100;
             slideshow.style.transform = `translateX(${offset}%)`;
         }
- 
-    
+
+        // Initialize Slide Position
+        window.onload = () => {
+            const slideshow = document.querySelector('.slideshow');
+            slideshow.style.transform = `translateX(0%)`;
+        };
+
    </script>
     <!-- Welcome Section -->
     <section class="welcome-section">
