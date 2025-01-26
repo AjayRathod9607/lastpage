@@ -27,6 +27,7 @@ body {
   /* Vertically center content */
   justify-content: space-between;
   /* Space between left and right sections */
+  padding-top: 0;
 }
 
 
@@ -64,13 +65,13 @@ body {
 .header img {
   height: 15%;
   /* Adjust the height as needed */
-  width: 15%;
+  width: 17%;
   /* Maintain aspect ratio */
   vertical-align: middle;
   /* Align it with the text */
   margin-left: 15px;
   /* Add space between the logo text and the image */
-  padding-left: 5cm;
+  padding-left: 2cm;
 }
 
 /* Hover effect for links */
@@ -183,7 +184,7 @@ nav li ul li a:hover {
   max-width: 1520px; /* Limit the slideshow width */
   margin: auto; /* Center the slideshow */
   position: relative; /* Allow absolute positioning for slides */
-  height: 30%%;
+  height: 30%;
 }
 
 /* Style individual slides */
@@ -385,4 +386,80 @@ nav {
     font-size: 0;
     animation: 30s slidy infinite; 
   }
+
+    /* Search Bar */
+        .search-container {
+    
+          display: flex;
+          justify-content: flex-end;
+          align-items:flex-end;
+          gap: 10px;
+          position: right;
+          width: 100%;
+          margin-top: 0;
+        }
+  
+        .search-bar {
+          padding: 8px;
+          margin-left: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+          position: right;
+        }
+  
+        .search-button {
+          padding: 8px 12px;
+          margin-left: 20px;
+          background-color: #056bf9;
+          color: white;
+          border: none;
+          position: right;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+  
+    .search-button:hover {
+      background-color: #87d646;
+    }
+
+        /* Language Selector */
+        .language-selector {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 10px;
+          font-size: 14px;
+        }
+    
+        .language-dropdown {
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                  .header {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    text-align: center;
+                  }
+        
+                  .navigation {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 10px;
+                  }
+        
+                  .search-container,
+                  .language-selector {
+                    margin-top: 10px;
+                    justify-content: center;
+                  }
+                }
+                h1{
+                  -
+                }
   

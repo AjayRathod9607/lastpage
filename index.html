@@ -10,25 +10,18 @@
 <header class="header">
     
     <img src="https://i.postimg.cc/j2SVjgrQ/jain-temples-and-businesses.jpg" alt="jain_religion" class="header-logo" id="image">
-    <div class="header-right">
-        <a class="active" href="#home">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
-    <!-- Hamburger Menu Button -->
-    <div class="hamburger-menu" onclick="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <!-- Translate Dropdown -->
-    <div class="translate-dropdown">
-        <select id="language" onchange="translatePage()">
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
-            <option value="fr">French</option>
-        </select>
-    </div>
+<a href="#home" class="logo"><u><h1>Jain Temples And Businesses</u></h1></a>
+</div>
+
+<!-- Navigation Links -->
+<nav class="navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#regions">Regions</a>
+    <a href="#faqs">FAQs</a>
+</nav>
+   
 </header>
 
     <!-- Sidebar Content -->
@@ -116,7 +109,26 @@
                 </ul>
             </li>
         </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="language-selector">
+            <label for="language">Language:</label>
+            <select id="language" class="language-dropdown">
+                <option value="en">English</option>
+                <option value="hi">हिंदी (Hindi)</option>
+                <option value="mr">मराठी (Marathi)</option>
+                <option value="gu">ગુજરાતી (Gujarati)</option>
+                <option value="bn">বাংলা (Bengali)</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+                <option value="kn">ಕನ್ನಡ (Kannada)</option>
+            </select>
+        </div>
     </nav>
+    <!-- Search Bar -->
+    
 
     <!-- Slideshow Section -->
      <body>
