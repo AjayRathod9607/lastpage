@@ -33,6 +33,19 @@
             <li><a href="#about">About</a></li>
         </ul>
     </div>
+    <div class="language-selector">
+        <label for="language">Language:</label>
+        <select id="language" class="language-dropdown">
+            <option value="en">English</option>
+            <option value="hi">हिंदी (Hindi)</option>
+            <option value="mr">मराठी (Marathi)</option>
+            <option value="gu">ગુજરાતી (Gujarati)</option>
+            <option value="bn">বাংলা (Bengali)</option>
+            <option value="ta">தமிழ் (Tamil)</option>
+            <option value="te">తెలుగు (Telugu)</option>
+            <option value="kn">ಕನ್ನಡ (Kannada)</option>
+        </select>
+    </div>
 
     <!-- Navigation Menu for Regions -->
     <nav>
@@ -111,21 +124,9 @@
         </ul>
         <div class="search-container">
             <input type="text" placeholder="Search..." class="search-bar">
-            <button class="search-button">Search</button>
+            <button class="search-button" type="submit">Search</button>
         </div>
-        <div class="language-selector">
-            <label for="language">Language:</label>
-            <select id="language" class="language-dropdown">
-                <option value="en">English</option>
-                <option value="hi">हिंदी (Hindi)</option>
-                <option value="mr">मराठी (Marathi)</option>
-                <option value="gu">ગુજરાતી (Gujarati)</option>
-                <option value="bn">বাংলা (Bengali)</option>
-                <option value="ta">தமிழ் (Tamil)</option>
-                <option value="te">తెలుగు (Telugu)</option>
-                <option value="kn">ಕನ್ನಡ (Kannada)</option>
-            </select>
-        </div>
+       
     </nav>
     <!-- Search Bar -->
     
@@ -206,5 +207,40 @@
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
     cb=googleTranslateElementInit">
     </script>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <h2>Welcome to Maharashtra's Wonders</h2>
+            <p>
+                Explore the diverse regions of Maharashtra, from its scenic beauty and historical landmarks to the best
+                accommodations, local businesses, and serene temples. Let us be your guide in discovering the heart of
+                Maharashtra!
+            </p>
+            <div class="welcome-highlights">
+                <div class="highlight">
+                    <img src="tourist.png" alt="Tourist Attractions">
+                    <h3>Tourist Attractions</h3>
+                    <p>Discover iconic destinations and hidden gems.</p>
+                </div>
+                <div class="highlight">
+                    <img src="accommodation.png" alt="Accommodation">
+                    <h3>Accommodation</h3>
+                    <p>Find comfortable places to stay during your journey.</p>
+                </div>
+                <div class="highlight">
+                    <img src="business.png" alt="Local Businesses">
+                    <h3>Local Businesses</h3>
+                    <p>Support and explore the vibrant local economy.</p>
+                </div>
+                <div class="highlight">
+                    <img src="temple.png" alt="Temples">
+                    <h3>Temples</h3>
+                    <p>Visit serene and spiritually enriching temples.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
