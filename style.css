@@ -39,7 +39,7 @@ body {
   /* Add padding around text */
   text-decoration: none;
   /* Remove underline from links */
-  font-size: 18px;
+  font-size: 20px;
   /* Set font size */
   border-radius: 4px;
   /* Add slight rounding to link borders */
@@ -53,7 +53,7 @@ body {
   /* Make the logo bold */
   text-decoration: none;
   /* Remove underline */
-  color: rgb(244, 11, 85);
+  color: rgb(248, 9, 85);
   /* Logo text color */
   display: flex;
   /* Flex container for logo and image */
@@ -135,10 +135,11 @@ nav li {
 /* Style links within the navigation bar */
 nav a {
   text-decoration: none; /* Remove underline from links */
-  color: white; /* Set link text to white */
+  color: rgb(255, 255, 255); /* Set link text to white */
   padding: 5px 10px; /* Add padding inside links */
   display: block; /* Make links occupy their container */
   border-radius: 5px;
+  font-size: 20px;
 }
 
 /* hover for regions*/
@@ -150,11 +151,12 @@ nav a:hover{
 nav li ul {
   display: none; /* Hide dropdown menus by default */
   position: absolute; /* Position dropdowns relative to their parent */
-  background-color: #fff; /* Set a white background for dropdowns */
+  background-color: #ee0d0d; /* Set a white background for dropdowns */
   padding: 10px; /* Add padding inside the dropdown */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
   z-index: 9999; /* Ensure dropdown is on top */
   border-radius: 5px;
+  
 
   
 }
@@ -178,60 +180,90 @@ nav li ul li a:hover {
 
 
 /* Slideshow Styling */
-/* Style the container for the slideshow */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
 .slideshow-container {
-
-  max-width: 1520px; /* Limit the slideshow width */
-  margin: auto; /* Center the slideshow */
-  position: relative; /* Allow absolute positioning for slides */
-  height: 30%;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
 }
 
-/* Style individual slides */
+.slideshow {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  animation: slide 15s linear infinite;
+}
+
 .slide {
-  display: none; /* Hide all slides initially */
-   overflow: hidden; }
+  min-width: 100%;
+  box-sizing: border-box;
+}
 
-
-/* Style images inside the slides */
 .slide img {
-  width: 100%; /* Make images fill the slide container */
-  height: 50%;
-  
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 
-/* Style the caption text in the slideshow */
-.text {
-  background-color: #fa9908; /* Orange background for the text */
-  color: white; /* White text */
-  padding: 10px; /* Add padding around the text */
-  position: absolute; /* Position the caption text at the bottom */
-  bottom: 0; /* Align text to the bottom of the slide */
-  width: 100%; /* Make text span the width of the slide */
-  text-align: center; /* Center-align the text */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(-200%);
+  }
+
+  75% {
+    transform: translateX(-300%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
-/* Style the dots (indicators) below the slideshow */
-.dots {
-  text-align: center; /* Center the dots */
-  margin-top: 10px; /* Add space above the dots */
-}
-
-/* Style individual dots */
-.dot {
-  height: 15px; /* Set height for dots */
-  width: 15px; /* Set width for dots */
-  background-color: #bbb; /* Light gray background for dots */
-  border-radius: 50%; /* Make dots circular */
-  display: inline-block; /* Display dots inline */
-  margin: 0 5px; /* Add spacing between dots */
-  transition: background-color 0.6s ease; /* Add smooth color transition */
-}
-
-/* Style the active dot */
-.active {
-  background-color: #717171; /* Darker gray for the active dot */
+.slideshow {
+  display: flex;
+  animation: slide 15s linear infinite;
 }
 
 /* Dropdown and Region Styling */
@@ -339,7 +371,7 @@ nav {
 }
 
 /* Styles for Slideshow */
-.mySlides {
+.slide {
   display: none;
 }
 
@@ -358,17 +390,8 @@ nav {
   }
 }
 
-@keyframes slidy {
-  0% { left: 0%; }
-  20% { left: 0%; }
-  25% { left: -100%; }
-  45% { left: -100%; }
-  50% { left: -200%; }
-  70% { left: -200%; }
-  75% { left: -300%; }
-  95% { left: -300%; }
-  100% { left: -400%; }
-  }
+
+ }
   
   body { margin: 0; } 
 
