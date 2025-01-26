@@ -70,6 +70,7 @@ body {
   /* Align it with the text */
   margin-left: 15px;
   /* Add space between the logo text and the image */
+  padding-left: 5cm;
 }
 
 /* Hover effect for links */
