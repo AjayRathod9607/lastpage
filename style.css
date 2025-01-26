@@ -62,9 +62,9 @@ body {
 
 /* Style the logo image */
 .header img {
-  height: 50%;
+  height: 20%;
   /* Adjust the height as needed */
-  width: 30%;
+  width: 20%;
   /* Maintain aspect ratio */
   vertical-align: middle;
   /* Align it with the text */
