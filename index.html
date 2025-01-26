@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maharashtra Regions</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#default" class="logo">CompanyLogo</a>
+        <div class="header-right">
+            <a class="active" href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Sidebar Content -->
+    <div class="sidebar" id="sidebar">
+        <div class="logo">AJR</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Translate Dropdown -->
+    <div class="translate-dropdown">
+        <select id="language" onchange="translatePage()">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+        </select>
+    </div>
+
+    <!-- Navigation Menu for Regions -->
+    <nav>
+        <ul>
+            <!-- Marathwada -->
+            <li>
+                <a href="#">Marathwada</a>
+                <ul>
+                    <li><a href="#">Chatrapati Sambhaji Nagar</a></li>
+                    <li><a href="#">Dharashiv</a></li>
+                    <li><a href="#">Jalna</a></li>
+                    <li><a href="#">Latur</a></li>
+                    <li><a href="#">Nanded</a></li>
+                    <li><a href="#">Beed</a></li>
+                    <li><a href="#">Parbhani</a></li>
+                    <li><a href="#">Hingoli</a></li>
+                </ul>
+            </li>
+            <!-- Konkan -->
+            <li>
+                <a href="#">Konkan</a>
+                <ul>
+                    <li><a href="#">Mumbai City</a></li>
+                    <li><a href="#">Mumbai Suburban</a></li>
+                    <li><a href="#">Raigad</a></li>
+                    <li><a href="#">Ratnagiri</a></li>
+                    <li><a href="#">Sindhudurg</a></li>
+                    <li><a href="#">Palghar</a></li>
+                    <li><a href="#">Thane</a></li>
+                </ul>
+            </li>
+            <!-- Western Maharashtra -->
+            <li>
+                <a href="#">Western Maharashtra</a>
+                <ul>
+                    <li><a href="#">Pune</a></li>
+                    <li><a href="#">Satara</a></li>
+                    <li><a href="#">Sangli</a></li>
+                    <li><a href="#">Kolhapur</a></li>
+                    <li><a href="#">Solapur</a></li>
+                </ul>
+            </li>
+            <!-- Vidarbha -->
+            <li>
+                <a href="#">Vidarbha</a>
+                <ul>
+                    <li><a href="#">Amravati</a></li>
+                    <li><a href="#">Akola</a></li>
+                    <li><a href="#">Buldhana</a></li>
+                    <li><a href="#">Chandrapur</a></li>
+                    <li><a href="#">Gadchiroli</a></li>
+                    <li><a href="#">Gondia</a></li>
+                    <li><a href="#">Nagpur</a></li>
+                    <li><a href="#">Wardha</a></li>
+                    <li><a href="#">Yavatmal</a></li>
+                </ul>
+            </li>
+            <!-- North Maharashtra -->
+            <li>
+                <a href="#">North Maharashtra</a>
+                <ul>
+                    <li><a href="#">Dhule</a></li>
+                    <li><a href="#">Jalgaon</a></li>
+                    <li><a href="#">Nandurbar</a></li>
+                </ul>
+            </li>
+            <!-- Khandesh -->
+            <li>
+                <a href="#">Khandesh</a>
+                <ul>
+                    <li><a href="#">Jalgaon</a></li>
+                    <li><a href="#">Dhule</a></li>
+                    <li><a href="#">Nandurbar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Slideshow Section -->
+     <body>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/3d/51/d2/jain-temple-mumbai.jpg">
+            <div class="text">Jain Temple, Mumbai</div>
+        </div>
+        <div class="slide">
+            <img src="https://www.treebo.com/blog/wp-content/uploads/2018/06/Excellent-Architecture-of-the-Jain-Temple-at-Nashik.jpg">
+            <div class="text">Jain Temple, Nashik</div>
+        </div>
+        <div class="slide">
+            <img src="http://www.visittnt.com/blog/wp-content/uploads/2018/05/Ranakpur-jain-temple1.jpg">
+            <div class="text">Ranakpur Jain Temple</div>
+        </div>
+    </div>
+
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000);
+        }
+
+        // Toggle Sidebar Menu for Mobile View
+        function toggleMenu() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Placeholder for translate function
+        function translatePage() {
+            var language = document.getElementById('language').value;
+            // Add translation logic here
+            console.log("Language selected: " + language);
+        }
+    </script>
+</body>
+</html>
